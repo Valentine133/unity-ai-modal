@@ -13,7 +13,6 @@
     "build.client": "vite build",
     "build.preview": "vite build --ssr src/entry.preview.tsx",
     "build.types": "tsc --incremental --noEmit",
-    "deploy": "echo 'Run \"npm run qwik add\" to install a server adapter'",
     "dev": "vite --mode ssr",
     "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
     "fmt": "prettier --write .",
@@ -21,6 +20,8 @@
     "lint": "eslint \"src/**/*.ts*\"",
     "preview": "qwik build preview && vite preview --open",
     "start": "vite --open --mode ssr",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build",
     "qwik": "qwik"
   },
   "devDependencies": {
@@ -33,6 +34,7 @@
     "autoprefixer": "^10.4.16",
     "eslint": "^8.51.0",
     "eslint-plugin-qwik": "^1.2.19",
+    "gh-pages": "^6.1.0",
     "postcss": "^8.4.31",
     "prettier": "^3.0.3",
     "tailwindcss": "^3.3.5",
