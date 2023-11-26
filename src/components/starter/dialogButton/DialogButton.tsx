@@ -1,5 +1,5 @@
 // DialogButton.tsx
-import { $, component$, useSignal } from "@builder.io/qwik";
+import { $, component$, useSignal, useTask$ } from "@builder.io/qwik";
 import DialogWindow from "../dialogWindow/DialogWindow";
 
 import AiIcon from "~/media/ai-icon.png?jsx";
@@ -8,6 +8,17 @@ export default component$(() => {
   const isOpen = useSignal(false);
   const isActive = useSignal(false);
   const isSpeech = useSignal(true);
+  const isLangChange = useSignal(false);
+
+  useTask$(({ track, cleanup }) => {
+    const activeValue = track(() => isActive.value);
+
+    const debounced = setTimeout(() => {
+      isOpen.value = activeValue;
+    }, 2000);
+
+    cleanup(() => clearTimeout(debounced));
+  });
 
   return (
     <div class="container-custom justify-end fixed right-[50%] translate-x-[50%] bottom-[30px] xl:bottom-[52px] pointer-events-none">
@@ -100,11 +111,11 @@ export default component$(() => {
             />
           </button>
 
-          <div class="flex items-center gap-3 -ml-4">
+          <div class="flex items-center gap-2 -ml-5">
             <button
-              class="btn-gray-circle p-0 aspect-square"
+              class={`btn-gray-circle`}
               onClick$={() => {
-                isActive.value = !isActive.value;
+                isLangChange.value = !isLangChange.value;
               }}
             >
               <svg
@@ -113,9 +124,7 @@ export default component$(() => {
                 height="30"
                 viewBox="0 0 30 30"
                 fill="none"
-                class={`rounded-full border border-white ${
-                  isActive.value ? "opacity-70" : ""
-                }`}
+                class={`rounded-full border border-white`}
               >
                 <rect
                   x="-6.72266"
@@ -190,3 +199,7 @@ export default component$(() => {
     </div>
   );
 });
+function createEffect(arg0: () => () => void, arg1: import("@builder.io/qwik").Signal<boolean>[]) {
+  throw new Error("Function not implemented.");
+}
+
