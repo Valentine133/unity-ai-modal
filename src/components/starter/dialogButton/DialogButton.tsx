@@ -1,5 +1,4 @@
-// DialogButton.tsx
-import { $, component$, useSignal, useTask$ } from "@builder.io/qwik";
+import { component$, useSignal, useTask$ } from "@builder.io/qwik";
 import DialogWindow from "../dialogWindow/DialogWindow";
 
 import AiIcon from "~/media/ai-icon.png?jsx";
@@ -199,7 +198,4 @@ export default component$(() => {
     </div>
   );
 });
-function createEffect(arg0: () => () => void, arg1: import("@builder.io/qwik").Signal<boolean>[]) {
-  throw new Error("Function not implemented.");
-}
 

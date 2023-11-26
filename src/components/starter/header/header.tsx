@@ -1,4 +1,3 @@
-// Header.tsx
 import { component$, useSignal } from "@builder.io/qwik";
 import { links } from "./config";
 import Logo from "~/media/uwp.svg?jsx";
