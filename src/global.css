@@ -152,6 +152,6 @@ body {
   }
 
   .dialog-card {
-    @apply bg-gradient px-10 pt-[3rem] pb-2 rounded-[24px] w-full lg:max-w-[390px] border-2 border-purple-gradient border-b-0 shadow-custom;
+    @apply bg-gradient pt-0 px-4 md:px-10 pb-2 rounded-[24px] w-full lg:max-w-[390px] border-2 border-purple-gradient border-b-0 shadow-custom;
   }
 }
