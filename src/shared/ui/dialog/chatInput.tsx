@@ -26,7 +26,7 @@ export const ChatInput = component$(() => {
         type="text"
         class="flex-1 h-full px-3 md:py-2 lg:py-1 text-sm md:text-lg lg:text-sm font-normal bg-dark border-none rounded-[8px] focus:outline-none"
         placeholder="Сообщение"
-        value={message}
+        value={message.value}
       />
 
       <button class="bg-purple hover:bg-opacity-70 transition flex items-center justify-center h-full px-2 py-1 md:py-4 md:px-5 lg:py-1 lg:px-3 rounded-[12px]">

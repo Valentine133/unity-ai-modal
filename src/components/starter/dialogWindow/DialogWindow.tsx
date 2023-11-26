@@ -4,22 +4,26 @@ import { ChatInput } from "~/shared/ui/dialog/chatInput";
 import { ChatMessageLeft } from "~/shared/ui/dialog/chatMessageLeft";
 import { ChatMessageRight } from "~/shared/ui/dialog/chatMessageRight";
 
-const DialogWindow = component$(({ isOpen }) => {
+interface DialogWindowProps {
+  isOpen: boolean;
+}
+
+const DialogWindow = component$<DialogWindowProps>(({ isOpen }) => {
   const dialogClasses = isOpen
     ? "h-[500px] visible opacity-100"
     : "h-0 invisible opacity-0 py-0";
 
-     const messages = [
-       {
-         text: "Як заробити мільйон день приділяючи на день 5 хвилин?",
-         from: "right",
-       },
-       {
-         text: "Доброго дня, мене звати Юніті! Я ваш персональний помічник.",
-         from: "left",
-       },
-       // ...
-     ];
+  const messages = [
+    {
+      text: "Як заробити мільйон день приділяючи на день 5 хвилин?",
+      from: "right",
+    },
+    {
+      text: "Доброго дня, мене звати Юніті! Я ваш персональний помічник.",
+      from: "left",
+    },
+    // ...
+  ];
 
   return (
     <div
