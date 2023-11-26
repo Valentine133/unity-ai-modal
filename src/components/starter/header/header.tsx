@@ -8,10 +8,10 @@ export default component$(() => {
 
   return (
     <header class="fixed t-0 w-full z-40">
-      <div class="px-5 md:px-7 2xl:px-[135px] py-8 flex items-center">
+      <div class="px-5 md:px-7 2xl:px-[135px] py-8 flex flex-wrap items-center">
         <div class="flex items-center justify-between gap-4 md:gap-10">
-          <a href="/" title="qwik">
-            <Logo />
+          <a href="/" title="unity-ai" class="block">
+            <Logo class="w-[78px] md:w-[128px]" />
           </a>
           <button>
             <svg
@@ -38,14 +38,15 @@ export default component$(() => {
           </button>
         </div>
         <ul
-          class={`mx-auto flex flex-col xl:flex-row gap-12 ${
+          class={`mx-auto py-4 mt-4 xl:mt-0 flex flex-col xl:flex-row items-center gap-6 xl:gap-10 order-last xl:order-[inherit] bg-gradient xl:bg-none w-full xl:w-auto border-2 xl:border-none border-purple rounded-[24px]
+          ${
             isMenuOpen.value ? "flex" : "hidden xl:flex"
           }`}
         >
           {links.map(({ link, title }) => (
             <li key={title}>
               <a
-                class="text-light uppercase hover:text-main transition"
+                class="text-light uppercase hover:text-main transition p-2"
                 href={link}
               >
                 {title}
@@ -1032,7 +1033,7 @@ export default component$(() => {
 
           <button
             onClick$={() => (isMenuOpen.value = !isMenuOpen.value)}
-            class="xl:hidden"
+            class="xl:hidden ml-2"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
