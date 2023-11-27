@@ -11,6 +11,7 @@ module.exports = {
         grayCustom: "#212121",
         light: "#F8F8F8",
         main: "#FF304D",
+        blue: "#3EB0F6",
       },
     },
   },

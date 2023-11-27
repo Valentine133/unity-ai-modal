@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 
-import AiIcon from "~/media/ai-icon.png?jsx";
+import AiIcon from "~/media/icon-ai.png?jsx";
 
 interface ChatMessageLeftProps {
   message: string;

@@ -10,7 +10,7 @@ export default component$(() => {
         <div class="flex flex-col md:hidden gap-4 h-screen text-center items-center justify-center">
           <AiMobile class="w-[220px]" />
           <h3 class="">Unique AI</h3>
-          <h2 class="h1">
+          <h2 class="h1 bg-clip-text text-transparent bg-gradient-to-r from-purple to-blue">
             Hi _)
             <br /> i am unity
           </h2>

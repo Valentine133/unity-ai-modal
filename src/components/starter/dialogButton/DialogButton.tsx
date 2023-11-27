@@ -1,7 +1,7 @@
 import { component$, useSignal, useTask$ } from "@builder.io/qwik";
 import DialogWindow from "../dialogWindow/DialogWindow";
 
-import AiIcon from "~/media/ai-icon.png?jsx";
+import AiIcon from "~/media/icon-ai.png?jsx";
 
 export default component$(() => {
   const isOpen = useSignal(false);
