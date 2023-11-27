@@ -1,7 +1,7 @@
 import { component$, useSignal, useTask$ } from "@builder.io/qwik";
 import DialogWindow from "../dialogWindow/DialogWindow";
 
-import AiIcon from "~/media/ai-icon.png?jsx";
+import AiIcon from "~/media/AI-icon.png?jsx";
 
 export default component$(() => {
   const isOpen = useSignal(false);
@@ -14,7 +14,7 @@ export default component$(() => {
 
     const debounced = setTimeout(() => {
       isOpen.value = activeValue;
-    }, 2000);
+    }, 1500);
 
     cleanup(() => clearTimeout(debounced));
   });
@@ -23,13 +23,13 @@ export default component$(() => {
     <div class="container-custom justify-end fixed right-[50%] translate-x-[50%] bottom-[30px] xl:bottom-[52px] pointer-events-none">
       <div class="flex flex-col items-center lg:items-end ">
         <div
-          class={`w-[310px] flex pointer-events-auto items-center justify-center lg:mr-10 bg-dark rounded-[30px] border-[6px] border-black outline outline-2 outline-purple transition relative z-10
-          ${isActive.value ? "visible h-[80px] p-3" : "invisible p-0"}
+          class={`dialog-menu w-[310px] flex gap-x-24 pointer-events-auto items-center justify-center lg:mr-10 bg-dark rounded-[24px] border-[3px] border-black outline outline-1 outline-purple transition relative z-10
+          ${isActive.value ? "visible h-[64px] p-3" : "invisible p-0"}
           ${isOpen.value ? "translate-y-[50%]" : ""}
         `}
         >
           <button
-            class="btn-gray-circle px-2 -mr-4 w-[86px]"
+            class="btn-gray-circle px-2 w-[86px]"
             onClick$={() => {
               isSpeech.value = !isSpeech.value;
             }}
@@ -98,19 +98,21 @@ export default component$(() => {
             onClick$={() => {
               isActive.value = !isActive.value;
             }}
-            class={`transition-all duration-500 z-5 ${
-              isActive.value ? "scale-50 -translate-y-2" : "h-[124px] w-[124px]"
+            class={`absolute bottom-0 right-50 translate-x-50 translate-y-50 transition-all duration-500 z-10 ${
+              isActive.value
+                ? "h-[58px] w-[58px] -translate-y-1"
+                : "h-[90px] w-[90px] md:h-[144px] md:w-[144px] lg:h-[124px] lg:w-[124px]"
             }`}
             disabled={isOpen.value ? true : false}
           >
             <AiIcon
-              class={`animate-pulse max-w-[inherit] ${
+              class={`animate-pulse max-w-[inherit] object-contain w-full h-full ${
                 isActive.value ? "" : "visible"
               }`}
             />
           </button>
 
-          <div class="flex items-center gap-2 -ml-5">
+          <div class="flex items-center gap-2">
             <button
               class={`btn-gray-circle`}
               onClick$={() => {

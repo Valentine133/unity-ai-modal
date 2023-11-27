@@ -10,12 +10,12 @@ interface DialogWindowProps {
 
 const DialogWindow = component$<DialogWindowProps>(({ isOpen }) => {
   const dialogClasses = isOpen
-    ? "h-[500px] visible opacity-100"
+    ? "h-[400px] visible opacity-100"
     : "h-0 invisible opacity-0 py-0";
 
   const messages = [
     {
-      text: "Як заробити мільйон день приділяючи на день 5 хвилин?",
+      text: "Як заробити мільйон приділяючи на день 5 хвилин?",
       from: "right",
     },
     {

@@ -31,7 +31,7 @@ export default component$(() => {
       <Header />
       <main>
         <Slot />
-        <div class="cookies container-custom absolute bottom-[24vh] lg:bottom-[30px] xl:bottom-[52px] right-0 lg:left-0 z-30 w-full md:w-auto pointer-events-none">
+        <div class="cookies container-custom absolute bottom-[20vh] lg:bottom-[30px] xl:bottom-[52px] right-0 lg:left-0 z-30 w-full md:w-auto pointer-events-none">
           <Cookies />
         </div>
       </main>

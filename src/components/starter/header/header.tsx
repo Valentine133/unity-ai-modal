@@ -37,7 +37,7 @@ export default component$(() => {
           </button>
         </div>
         <ul
-          class={`mx-auto py-4 mt-4 xl:mt-0 flex flex-col xl:flex-row items-center gap-6 xl:gap-10 order-last xl:order-[inherit] bg-gradient xl:bg-none w-full xl:w-auto border-2 xl:border-none border-purple rounded-[24px]
+          class={`mx-auto p-4 mt-4 xl:mt-0 flex flex-col xl:flex-row items-center gap-6 xl:gap-10 order-last xl:order-[inherit] bg-gradient xl:bg-none w-full xl:w-auto border-2 xl:border-none border-purple rounded-[24px]
           ${
             isMenuOpen.value ? "flex" : "hidden xl:flex"
           }`}

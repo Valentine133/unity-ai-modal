@@ -31,7 +31,7 @@ export default component$(() => {
           <a
             href="#"
             target="_blank"
-            class="xl:absolute mr-auto ml-16 xl:ml-0 left-12 bottom-[24vh] 2xl:left-[15vw] 2xl:bottom-[18vh] hidden md:flex flex-col btn-red-circle w-[133px] xl:w-[177px] aspect-square"
+            class="xl:absolute mr-auto ml-16 xl:ml-0 left-12 bottom-[24vh] 2xl:left-[15vw] 2xl:bottom-[18vh] hidden md:flex flex-col btn-red-circle leading-5 w-[133px] xl:w-[177px] aspect-square"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
